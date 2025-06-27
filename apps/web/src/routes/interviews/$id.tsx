@@ -390,9 +390,9 @@ function RouteComponent() {
         x: 0,
         y: 0,
         w: 8,
-        h: 6,
+        h: 8,
         minW: 6,
-        minH: 4,
+        minH: 8,
         maxW: 12,
         maxH: 8,
       },
@@ -401,9 +401,9 @@ function RouteComponent() {
         x: 8,
         y: 0,
         w: 4,
-        h: 6,
+        h: 8,
         minW: 3,
-        minH: 4,
+        minH: 8,
         maxW: 6,
         maxH: 8,
       },
@@ -416,7 +416,7 @@ function RouteComponent() {
         w: 6,
         h: 6,
         minW: 4,
-        minH: 4,
+        minH: 6,
         maxW: 8,
         maxH: 8,
       },
@@ -427,7 +427,7 @@ function RouteComponent() {
         w: 4,
         h: 6,
         minW: 3,
-        minH: 4,
+        minH: 6,
         maxW: 6,
         maxH: 8,
       },
@@ -440,7 +440,7 @@ function RouteComponent() {
         w: 6,
         h: 6,
         minW: 4,
-        minH: 4,
+        minH: 6,
         maxW: 6,
         maxH: 8,
       },
@@ -451,7 +451,7 @@ function RouteComponent() {
         w: 6,
         h: 4,
         minW: 4,
-        minH: 3,
+        minH: 6,
         maxW: 6,
         maxH: 6,
       },
@@ -522,7 +522,7 @@ function RouteComponent() {
         preventCollision={false} // Allow overlapping to enable snapping
         allowOverlap={false} // Prevent actual overlaps
         // Drag Handle Configuration
-        draggableHandle="drag-handle" // Only elements with this class can be dragged
+        draggableHandle=".drag-handle" // Only elements with this class can be dragged
         isDraggable={true}
         isResizable={true}
         // Snappy margins and padding
