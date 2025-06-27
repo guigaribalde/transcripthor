@@ -129,7 +129,106 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Dashboard Grid Styles with Snappy Behavior */
+.react-grid-layout {
+  position: relative;
+}
+
+.react-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top, width, height;
+}
+
+.react-grid-item.cssTransforms {
+  transition-property: transform, width, height;
+}
+
+.react-grid-item.resizing {
+  transition: none;
+}
+
+.react-grid-item.react-draggable-dragging {
+  transition: none;
+  z-index: 3;
+}
+
+/* Enhanced Resize Handle */
+.react-grid-item>.react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNiA2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZG90cyBmaWxsPSIjOTk5IiBkPSJtMTUgMTJoLTEwdi0xaDEwem0wIDRoLTEwdi0xaDEwem0wIDRoLTEwdi0xaDEweiIgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1KSIgZmlsbC1vcGFjaXR5PSIuNCIvPgo8L3N2Zz4K");
+  background-position: bottom right;
+  padding: 0 3px 3px 0;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  box-sizing: border-box;
+  cursor: se-resize;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.react-grid-item:hover>.react-resizable-handle {
+  opacity: 1;
+}
+
+/* Drag Handle Styles */
+.drag-handle {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.drag-handle:hover {
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+.drag-handle:active {
+  background-color: hsl(var(--muted) / 0.8);
+}
+
+.widget {
+  height: 100%;
+  width: 100%;
+}
+
+/* Improved grid snapping visual feedback */
+.react-grid-placeholder {
+  background: hsl(var(--primary) / 0.1);
+  border: 2px dashed hsl(var(--primary) / 0.3);
+  border-radius: var(--radius);
+  transition: all 200ms ease;
+}
+
+/* Custom scrollbar */
+.react-grid-layout::-webkit-scrollbar {
+  width: 6px;
+}
+
+.react-grid-layout::-webkit-scrollbar-track {
+  background: hsl(var(--muted) / 0.1);
+}
+
+.react-grid-layout::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 3px;
+}
+
+.react-grid-layout::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Highlight draggable areas on hover */
+.react-grid-item:hover .drag-handle {
+  border-color: hsl(var(--primary) / 0.3);
+  background-color: hsl(var(--primary) / 0.05);
 }

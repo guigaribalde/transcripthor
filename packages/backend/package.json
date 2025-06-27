@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "convex dev",
-    "dev:setup": "convex dev --configure --until-success"
+    "dev:setup": "convex dev --configure --until-success",
+    "env:list": "convex env list",
+    "env:set": "convex env set"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +14,8 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@mux/mux-node": "^11.1.0",
+    "@types/node": "^22.15.33",
     "convex": "^1.25.0"
   }
 }
