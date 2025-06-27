@@ -159,7 +159,7 @@ body {
 }
 
 /* Enhanced Resize Handle */
-.react-grid-item>.react-resizable-handle {
+.react-grid-item > .react-resizable-handle {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -176,7 +176,7 @@ body {
   transition: opacity 0.2s ease;
 }
 
-.react-grid-item:hover>.react-resizable-handle {
+.react-grid-item:hover > .react-resizable-handle {
   opacity: 1;
 }
 
